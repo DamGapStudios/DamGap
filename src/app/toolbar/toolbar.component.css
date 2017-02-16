@@ -1,0 +1,4 @@
+/*To properly space out the Toolbar*/
+.example-spacer {
+  flex: 1 1 auto;
+}
