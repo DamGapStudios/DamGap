@@ -1,0 +1,8 @@
+.example-card {
+  width: 400px;
+}
+
+.example-header-image {
+  background-image: url('https://placehold.it/350x150');
+  background-size: cover;
+}
