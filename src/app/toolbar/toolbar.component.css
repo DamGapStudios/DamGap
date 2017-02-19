@@ -2,3 +2,6 @@
 .example-spacer {
   flex: 1 1 auto;
 }
+.topic-spacer {
+  padding: 20px;
+}
