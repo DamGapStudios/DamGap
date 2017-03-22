@@ -1,0 +1,3 @@
+{
+	templating_engine: "handlebars",
+}
