@@ -1,4 +1,4 @@
-# damgap
+# Damgap Studios
 
 > Our Website
 
