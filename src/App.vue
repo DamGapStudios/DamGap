@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <a href="/">
-    <img src="./assets/logo.png">
+      <img src="./assets/logo.png">
     </a>
     <router-view></router-view>
   </div>
@@ -10,7 +10,11 @@
 <script>
 export default {
   name: 'app',
+  data: {
+    msg: 'DamGap Studios',
+  },
 };
+
 </script>
 
 <style>
