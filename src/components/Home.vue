@@ -1,9 +1,5 @@
 <template>
-  <div>
-    <md-toolbar>
-      <h1 class="md-title">My Title</h1>
-    </md-toolbar>
-    <a href="/hello">Hi my name is bob</a>
+  <div class="padding">
     <Projects></Projects>
     <md-button>Default</md-button>
   </div>
@@ -21,4 +17,10 @@
     },
   };
 </script>
+
+<style>
+  .padding {
+    padding: 10px;
+  }
+</style>
 
