@@ -19,7 +19,7 @@
       </md-toolbar>
         <div class="padding">
           <md-list>
-            <md-list-item v-for="link in links" v-bind:href="link.url" >{{link.text}}</md-list-item>
+            <md-list-item v-for="link in links" v-bind:href="link.url" :key="link.id">{{link.text}}</md-list-item>
           </md-list>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate esse necessitatibus beatae nobis, deserunt ut est fugit, tempora deleniti, eligendi commodi doloribus. Nemo, assumenda possimus, impedit inventore perferendis iusto!</p>
         </div>
@@ -36,9 +36,9 @@
         title: 'Dam Gap Studios',
         links:
         [
-            { text: 'Home', url: '/' },
-            { text: 'Hello', url: '/Hello' },
-            { text: 'Contact', url: '/Contact' },
+            { id: 1, text: 'Home', url: '/' },
+            { id: 2, text: 'Hello', url: '/Hello' },
+            { id: 3, text: 'Contact', url: '/Contact' },
         ],
       };
     },
