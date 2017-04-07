@@ -5,7 +5,7 @@
         <md-icon>menu</md-icon>
       </md-button>
 
-      <h2 class="md-title">My App</h2>
+      <h2 class="md-title">DamGap Studios</h2>
     </md-toolbar>
 
     <div>
