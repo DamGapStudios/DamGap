@@ -39,6 +39,7 @@
             { id: 1, text: 'Home', url: '/' },
             { id: 2, text: 'Hello', url: '/Hello' },
             { id: 3, text: 'Contact', url: '/Contact' },
+            { id: 4, text: 'About Us', url: '/about-us' },
         ],
       };
     },

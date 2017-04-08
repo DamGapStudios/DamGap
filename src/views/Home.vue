@@ -1,20 +1,16 @@
 <template>
   <div class="padding">
+    <Projects></Projects>
     <md-button>Default</md-button>
   </div>
 </template>
 
 <script>
 
-  import Projects from './Projects';
+  import Projects from '../components/Projects';
 
   export default {
-    name: 'contact',
-    data() {
-      return {
-        title: 'Contact',
-      };
-    },
+    name: 'home',
 
     components: {
       Projects,
