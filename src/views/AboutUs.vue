@@ -5,7 +5,7 @@
     <md-card md-with-hover class="padding" md-theme="white">
       <md-card-header>
         <div class="md-title">DamGap Studios</div>
-        <div class="md-subhead">A startup with a focused in Web Dev</div>
+        <div class="md-subhead">A startup with a focus in Web Development</div>
       </md-card-header>
 
       <md-card-content>
@@ -23,7 +23,7 @@
       </md-card-header>
 
       <md-card-content>
-        {{ about.desription }}
+        {{ about.description }}
       </md-card-content>
 
       <md-card-actions>
@@ -42,8 +42,8 @@
       return {
         title: 'About Us',
         us: [
-          { name: 'Adrian Dunham', title: 'Lead Developer', description: 'Some Text here', url: 'adriandunham.com' },
-          { name: 'Anthony Garera', title: 'Lead Developer', description: 'Some Text here', url: '' },
+          { name: 'Adrian Dunham', title: 'Lead Developer', description: 'Some Text here', url: 'https://www.adriandunham.com' },
+          { name: 'Anthony Garera', title: 'Lead Developer', description: 'Some Text here', url: 'https://www.anthonygarera.com' },
         ],
       };
     },

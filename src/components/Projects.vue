@@ -7,7 +7,7 @@
     name: 'projects',
     data() {
       return {
-        msg: 'Hello world!',
+        msg: 'Our Work',
 
       };
     },
