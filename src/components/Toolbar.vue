@@ -7,9 +7,7 @@
 
       <h2 class="md-title" style="flex: 1">DamGap Studios</h2>
 
-      <a href="/hello"><md-button>Services</md-button></a>
-      <a href="/about-us"><md-button>About Us</md-button></a>
-      <a href="/contact"><md-button>Contact</md-button></a>
+      <md-button class="md-white" v-for="link in links" v-bind:href="link.url" :key="link.id" v-once>{{link.text}}</md-button>
 
     </md-toolbar>
 
@@ -45,6 +43,7 @@
             { id: 2, text: 'Hello', url: '/Hello' },
             { id: 3, text: 'Contact', url: '/Contact' },
             { id: 4, text: 'About Us', url: '/about-us' },
+            { id: 5, text: 'Services', url: '/services' },
         ],
       };
     },

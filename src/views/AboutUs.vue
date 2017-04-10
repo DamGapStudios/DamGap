@@ -16,36 +16,25 @@
 
     <h1 class="center-text">Developers</h1>
     <!--Developer Cards-->
-    <md-card md-with-hover v-for="about in us" :key="about.name" class="padding" md-theme="white">
-      <md-card-header>
-        <div class="md-title">{{ about.name }}</div>
-        <div class="md-subhead">{{ about.title }}</div>
-      </md-card-header>
-
-      <md-card-content>
-        {{ about.description }}
-      </md-card-content>
-
-      <md-card-actions>
-        <md-button v-bind:href="about.url">Personal Site</md-button>
-      </md-card-actions>
-    </md-card>
+    <developer-about></developer-about>
 
 
   </div>
 </template>
 
 <script>
+  import DeveloperAbout from '../components/DeveloperAbout';
+
   export default {
     name: 'aboutUs',
     data() {
       return {
         title: 'About Us',
-        us: [
-          { name: 'Adrian Dunham', title: 'Lead Developer', description: 'Some Text here', url: 'https://www.adriandunham.com' },
-          { name: 'Anthony Garera', title: 'Lead Developer', description: 'Some Text here', url: 'https://www.anthonygarera.com' },
-        ],
       };
+    },
+
+    components: {
+      DeveloperAbout,
     },
   };
 </script>
