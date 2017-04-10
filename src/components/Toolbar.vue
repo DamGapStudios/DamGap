@@ -7,7 +7,7 @@
 
       <h2 class="md-title" style="flex: 1">DamGap Studios</h2>
 
-      <md-button class="md-white" v-for="link in links" v-bind:href="link.url" :key="link.id" v-once>{{link.text}}</md-button>
+      <md-button class="md-white" v-for="link in this.$router.options.routes" v-bind:href="link.path" :key="link.name" v-once>{{link.name}}</md-button>
 
     </md-toolbar>
 
@@ -22,7 +22,7 @@
       </md-toolbar>
         <div class="padding">
           <md-list>
-            <md-list-item v-for="link in links" v-bind:href="link.url" :key="link.id" v-once>{{link.text}}</md-list-item>
+            <md-list-item v-for="link in this.$router.options.routes" v-bind:href="link.path" :key="link.name" v-once>{{link.name}}</md-list-item>
           </md-list>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate esse necessitatibus beatae nobis, deserunt ut est fugit, tempora deleniti, eligendi commodi doloribus. Nemo, assumenda possimus, impedit inventore perferendis iusto!</p>
         </div>
@@ -37,14 +37,6 @@
     data() {
       return {
         title: 'Dam Gap Studios',
-        links:
-        [
-            { id: 1, text: 'Home', url: '/' },
-            { id: 2, text: 'Hello', url: '/Hello' },
-            { id: 3, text: 'Contact', url: '/Contact' },
-            { id: 4, text: 'About Us', url: '/about-us' },
-            { id: 5, text: 'Services', url: '/services' },
-        ],
       };
     },
     methods: {
