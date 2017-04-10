@@ -7,7 +7,7 @@
 
       <h2 class="md-title" style="flex: 1">DamGap Studios</h2>
 
-      <md-button class="md-white" v-for="link in this.$router.options.routes" v-bind:href="link.path" :key="link.name" v-once>{{link.name}}</md-button>
+      <md-button class="md-white" md-hide-medium v-for="link in this.$router.options.routes" v-bind:href="link.path" :key="link.name" v-once>{{link.name}}</md-button>
 
     </md-toolbar>
 

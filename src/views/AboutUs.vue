@@ -14,7 +14,7 @@
 
     </md-card>
 
-    <h1 class="center-text">Developers</h1>
+    <h1 class="center-text md-display-1">Developers</h1>
     <!--Developer Cards-->
     <developer-about></developer-about>
 
