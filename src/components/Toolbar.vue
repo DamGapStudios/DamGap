@@ -5,7 +5,12 @@
         <md-icon>menu</md-icon>
       </md-button>
 
-      <h2 class="md-title">DamGap Studios</h2>
+      <h2 class="md-title" style="flex: 1">DamGap Studios</h2>
+
+      <a href="/hello"><md-button>Services</md-button></a>
+      <a href="/about-us"><md-button>About Us</md-button></a>
+      <a href="/contact"><md-button>Contact</md-button></a>
+
     </md-toolbar>
 
     <div>
