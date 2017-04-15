@@ -2,12 +2,13 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 import VueMaterial from 'vue-material';
-
+import Gravatar from 'vue-gravatar';
 import App from './App';
 import router from './router';
 
 
 Vue.use(VueMaterial);
+Vue.component('v-gravatar', Gravatar);
 
 Vue.material.registerTheme({
   default: {
