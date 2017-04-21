@@ -1,9 +1,12 @@
 import Vue from 'vue';
+
 import Router from 'vue-router';
 import Hello from '@/views/Hello';
 import Home from '@/views/Home';
-import Contact from '@/views/Contact';
+import Services from '@/views/Services';
 import AboutUs from '@/views/AboutUs';
+
+import 'font-awesome/css/font-awesome.min.css';
 
 Vue.use(Router);
 
@@ -21,9 +24,9 @@ export default new Router({
       component: Home,
     },
     {
-      path: '/contact',
-      name: 'Contact',
-      component: Contact,
+      path: '/services',
+      name: 'Services',
+      component: Services,
     },
     {
       path: '/about-us',

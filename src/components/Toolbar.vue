@@ -2,7 +2,7 @@
   <div>
     <md-toolbar md-theme="toolbar">
       <md-button class="md-icon-button" @click.native="toggleLeftSidenav">
-        <md-icon>menu</md-icon>
+        <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
       </md-button>
 
       <h2 class="md-title" style="flex: 1">DamGap Studios</h2>

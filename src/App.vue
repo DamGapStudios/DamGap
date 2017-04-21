@@ -10,7 +10,7 @@
 
   export default {
     name: 'app',
-    data: {
+    APPdata: {
       msg: 'DamGap Studios',
     },
     components: {
