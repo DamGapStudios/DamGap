@@ -1,34 +1,48 @@
 <template>
-  <div class="padding">
-    <div class="center">
-      <span class="code-words">DEVELOP<span class="blinking-cursor">|</span></span>
-      <span class="create-words">CREATE </span>
-      <span class="smart-words"> IMPRESS</span>
+  <div class="home">
+    <div class="info">
+      <div class="center">
+        <span class="code-words">DEVELOP<span class="blinking-cursor">|</span></span>
+        <span class="create-words">CREATE </span>
+        <span class="smart-words"> IMPRESS</span>
+      </div>
+    </div>
+
+    <project-carousel style="padding-top: 100px"></project-carousel>
+    <div class="mainContent">
+      <div class="developers"></div>
     </div>
   </div>
 </template>
 
 <script>
-
-  import Projects from '../components/Projects';
-  import Contact from '../components/Contact';
+  import ProjectCarousel from '../components/ProjectCarousel';
 
   export default {
     name: 'home',
 
     components: {
-      Projects,
-      Contact,
+      ProjectCarousel,
     },
   };
 </script>
 
 <style>
-  .padding {
-    padding: 10px;
+
+  .home {
+    position: absolute; top: 0; left: 0;
+    width: 100%;
+    background-image: url("../assets/pexels-photo-390392.jpeg");
+    background-color: grey;
+    z-index: -1;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
   }
   .center{
     text-align: center;
+    padding: 22px 22% 22px 22%;
+    margin: 0 5%;
   }
   .code-words {
     font-family:	Lucida Console, Monaco, monospace;
@@ -107,6 +121,24 @@
 
   }
 
+  .info {
+    background-color: white;
+    width: 100%;
+    margin-top: 200px;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  }
+
+  .mainContent {
+    background-color: white;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    width: 90%;
+    margin: 200px 0 5% 5%;
+    flex-direction: row
+  }
+
+  .projectCarousel{
+
+  }
 
 </style>
 

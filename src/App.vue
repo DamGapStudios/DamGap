@@ -19,5 +19,8 @@
   };
 
 </script>
-<style src="../node_modules/vue-material/dist/vue-material.css">
+<style>
+  body {
+    margin: 0;
+  }
 </style>

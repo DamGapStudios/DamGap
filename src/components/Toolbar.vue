@@ -1,32 +1,8 @@
 <template>
-  <div>
-    <md-toolbar md-theme="toolbar">
-      <md-button class="md-icon-button" @click.native="toggleLeftSidenav">
-        <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
-      </md-button>
-
-      <h2 class="md-title" style="flex: 1">DamGap Studios</h2>
-
-      <md-button class="md-white" md-hide-medium v-for="link in this.$router.options.routes" v-bind:href="link.path" :key="link.name" v-once>{{link.name}}</md-button>
-
-    </md-toolbar>
-
-    <div>
-    </div>
-
-    <md-sidenav class="md-left" ref="leftSidenav" md-theme="toolbar">
-      <md-toolbar class="md-large">
-        <div class="md-toolbar-container">
-          <h3 class="md-title">DamGap Studios</h3>
-        </div>
-      </md-toolbar>
-        <div class="padding">
-          <md-list>
-            <md-list-item v-for="link in this.$router.options.routes" v-bind:href="link.path" :key="link.name" v-once>{{link.name}}</md-list-item>
-          </md-list>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi cupiditate esse necessitatibus beatae nobis, deserunt ut est fugit, tempora deleniti, eligendi commodi doloribus. Nemo, assumenda possimus, impedit inventore perferendis iusto!</p>
-        </div>
-      </md-sidenav>
+  <div class="toolbar">
+    <a class="button" v-for="link in links" v-bind:href="link.path" :key="link.name" v-once>{{link.name}}</a>
+    <span class="title">DamGap Studios</span>
+    <a class="button" v-for="contact in contacts" v-bind:href="contact.path" :key="contact.name" v-once>{{contact.name}}</a>
   </div>
 </template>
 
@@ -37,29 +13,62 @@
     data() {
       return {
         title: 'Dam Gap Studios',
+        links: [
+          { path: '/', name: 'Home' },
+          { path: '/services', name: 'Services' },
+          { path: '/about-us', name: 'About Us' },
+        ],
+        contacts: [
+          { path: 'github.com', name: 'Github' },
+          { path: 'linkedin.com', name: 'LinkedIn' },
+          { path: '/', name: 'Other' },
+        ],
       };
     },
     methods: {
-      toggleLeftSidenav() {
-        this.$refs.leftSidenav.toggle();
-      },
-      methods: {
-        toggleLeftSidenav() {
-          this.$refs.leftSidenav.toggle();
-        },
-//        open() {
-//          console.log('Opened: ' + ref);
-//        },
-//        close(ref) {
-//          console.log('Closed: ' + ref);
-//        },
-      },
     },
   };
 </script>
 
 <style scoped>
-  .padding {
-    padding: 10px;
+  .title {
+    font-size: 35px;
+  }
+
+  .toolbar {
+    margin: 0 5%;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    z-index: 2;
+    border-radius: 0px 0px 5px 5px;
+  }
+
+  a.button {
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    padding: 10px 10px;
+    margin: 5px 10px;
+    color: black;
+  }
+
+  a.button:hover {
+    text-decoration: none;
+    border-radius: 4px;
+    background: #7f8793;
+    color: white;
+  }
+
+  a.button:active {
+    text-decoration: none;
+    border-radius: 4px;
+    background: #7f8793;
+    color: white;
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .7);
   }
 </style>
