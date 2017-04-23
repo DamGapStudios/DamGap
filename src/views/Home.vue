@@ -1,27 +1,30 @@
 <template>
-  <div class="home">
+  <div class="home darkMode">
     <div class="info">
-      <div class="center">
+      <div class="center red-glow">
         <span class="code-words">DEVELOP<span class="blinking-cursor">|</span></span>
         <span class="create-words">CREATE </span>
         <span class="smart-words"> IMPRESS</span>
       </div>
     </div>
 
-    <project-carousel style="padding-top: 100px"></project-carousel>
+    <project-carousel style="padding-top: 20px"></project-carousel>
+
     <div class="mainContent">
-      <div class="developers"></div>
+      <contact></contact>
     </div>
   </div>
 </template>
 
 <script>
   import ProjectCarousel from '../components/ProjectCarousel';
+  import Contact from '../components/Contact';
 
   export default {
     name: 'home',
 
     components: {
+      Contact,
       ProjectCarousel,
     },
   };
@@ -31,13 +34,9 @@
 
   .home {
     position: absolute; top: 0; left: 0;
-    width: 100%;
-    background-image: url("../assets/pexels-photo-390392.jpeg");
-    background-color: grey;
     z-index: -1;
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-position: center top;
+    padding-top: 100px;
+    width: 100%;
   }
   .center{
     text-align: center;
@@ -48,12 +47,14 @@
     font-family:	Lucida Console, Monaco, monospace;
     font-size: 35px;
     padding: 15px;
+    color: #ba3945;
   }
 
   .blinking-cursor {
     font-weight: 100;
     font-size: 30px;
-    color: #2E3D48;
+    color: #ba3945;
+    text-shadow: 0;
     -webkit-animation: 1s blink step-end infinite;
     -moz-animation: 1s blink step-end infinite;
     -ms-animation: 1s blink step-end infinite;
@@ -66,7 +67,7 @@
       color: transparent;
     }
     50% {
-      color: black;
+      color: #ba3945;
     }
   }
 
@@ -75,7 +76,7 @@
       color: transparent;
     }
     50% {
-      color: black;
+      color: #ba3945;
     }
   }
 
@@ -84,7 +85,7 @@
       color: transparent;
     }
     50% {
-      color: black;
+      color: #ba3945;
     }
   }
 
@@ -93,7 +94,7 @@
       color: transparent;
     }
     50% {
-      color: black;
+      color: #ba3945;
     }
   }
 
@@ -102,7 +103,7 @@
       color: transparent;
     }
     50% {
-      color: black;
+      color: #ba3945;
     }
   }
 
@@ -110,7 +111,7 @@
     font-size: 35px;
     padding: 15px;
     font-family:	Comic Sans MS, cursive, sans-serif;
-    background-image: -webkit-linear-gradient(left, #48d7ea 0%, #005eff 100%);
+    background-image: -webkit-linear-gradient(left, #ff0018 0%, #993b44 100%);
     color:transparent;
     -webkit-background-clip: text;
   }
@@ -118,27 +119,24 @@
   .smart-words {
     font-size: 35px;
     font-family:	Arial Black, Gadget, sans-serif;
-
+    color: #ba3945;
   }
 
   .info {
-    background-color: white;
+    background-color: #313439;
     width: 100%;
-    margin-top: 200px;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    /*margin-top: 200px;*/
+    /*box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);*/
   }
 
   .mainContent {
-    background-color: white;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
     width: 90%;
     margin: 200px 0 5% 5%;
     flex-direction: row
   }
 
-  .projectCarousel{
-
+  .red-glow {
+    box-shadow: 0px 5px 5px 5px rgba(193, 52, 65, .5);
   }
-
 </style>
 

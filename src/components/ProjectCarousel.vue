@@ -1,27 +1,13 @@
 <template>
   <div id="projectCarousel">
-    <div v-for="project in projects" class="projectCard" style="background-color: #F6E84A; color: black">
-      <img src='../assets/creative_bookcover.png' class="projectImage"/>
+    <div v-for="project in projects" class="projectCard" :id="project.id" :style="{ backgroundColor: project.mainColor, color: project.mainFontColor, }">
+      <img src="../assets/creative_bookcover.png" class="projectImage"/>
       <div class="projectInfo">
-        <h3>Company Name</h3>
-        <p class="overFlow">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        </p>
+        <div class="projectTitle">{{ project.name }}</div>
+        <div class="projectClient">For {{ project.client }}</div>
+        <div class="projectDisc overFlow">{{ project.about }}</div>
         <div class="row">
-          <a class="projectButton" style="background-color: #EE4A5B" href="/">Read More</a>
-        </div>
-      </div>
-    </div>
-
-    <div v-for="project in projects" class="projectCard" :style="{ backgroundColor: project.mainColor, color: project.mainFontColor, }">
-      <img v-bind:src="project.image" class="projectImage"/>
-      <div class="projectInfo">
-        <h3>{{ project.name }}</h3>
-        <p class="overFlow">
-          {{ project.about }}
-        </p>
-        <div class="row">
-          <a class="projectButton" :style="{ backgroundColor: project.altColor, color: project.altFontColor, }" href="/">Read More</a>
+          <a class="projectButton" :style="{ backgroundColor: project.altColor, color: project.altFontColor, }" v-on:click="showMore(project.id)">Read More</a>
         </div>
       </div>
     </div>
@@ -36,17 +22,25 @@
       return {
         title: 'projectCarousel',
         projects: [
-          { name: 'Travel Julias Way',
+          {
+            id: 1,
+            name: 'Travel Julias Way',
             client: 'Julia Matheson',
-            about: 'Lorem ipsum dolor sit amet, consectetur adip',
-            image: 'assets/creative_bookcover.png',
-            mainColor: 'blue',
+            about: 'Lorem ipsum dolor sit amet, consectetur adip. Lorem ipsum dolor sit amet, consectetur adip. Lorem ipsum dolor sit amet, consectetur adip. Lorem ipsum dolor sit amet, consectetur adip',
+            image: '../assets/creative_bookcover.png',
+            mainColor: '#3C4767',
             mainFontColor: 'white',
-            altColor: 'grey',
-            altFontColor: 'white',
+            altColor: '#C5C7CE',
+            altFontColor: 'black',
           },
         ],
       };
+    },
+    methods: {
+      showMore(id) {
+        document.getElementById(id).style.height = '900px';
+        alert(id);
+      },
     },
   };
 </script>
@@ -63,7 +57,7 @@
     width: 450px;
     margin: 0 2% 75px 2%;
     border-radius: 4px;
-
+    box-shadow: 2px 4px 8px rgba(255, 255, 255, .7);
   }
 
   .projectInfo {
@@ -75,7 +69,7 @@
     width: 150px;
     height: 250px;
     margin: 20px;
-    box-shadow: 7px 7px 30px rgba(0, 0, 0, .5);
+    box-shadow: 2px 4px 8px rgba(255, 255, 255, .7);
     float: left;
   }
 
@@ -98,6 +92,7 @@
     padding: 10px;
     width: 50%;
     box-shadow: 7px 7px 30px rgba(0, 0, 0, .5);
+    cursor: pointer;
   }
 
   .projectButton:hover{
@@ -105,7 +100,21 @@
   }
 
   .overFlow{
+    overflow: hidden;
+    white-space: nowrap;
     text-overflow: ellipsis;
   }
 
+  .projectTitle {
+    font-size: 20pt;
+  }
+
+  .projectClient {
+    font-size: 15pt;
+  }
+
+  .projectDisc {
+    font-size: 12pt;
+    height: 70px;
+  }
 </style>

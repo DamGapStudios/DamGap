@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="darkMode">
     <toolbar></toolbar>
     <router-view></router-view>
   </div>
@@ -22,5 +22,11 @@
 <style>
   body {
     margin: 0;
+    height: 100%;
+  }
+
+  .darkMode{
+    color: #ba3945;
+    background-color: #313439;
   }
 </style>

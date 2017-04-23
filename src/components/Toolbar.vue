@@ -33,17 +33,18 @@
 <style scoped>
   .title {
     font-size: 35px;
+    color: #ba3945;
   }
 
   .toolbar {
     margin: 0 5%;
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 2px 4px 8px rgba(255, 255, 255, .7);
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: white;
-    z-index: 2;
+    background-color: #313439;
+    /*z-index: 2;*/
     border-radius: 0px 0px 5px 5px;
   }
 
@@ -54,7 +55,7 @@
     line-height: normal;
     padding: 10px 10px;
     margin: 5px 10px;
-    color: black;
+    color: #ba3945;
   }
 
   a.button:hover {
