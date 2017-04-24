@@ -57,7 +57,7 @@
     width: 450px;
     margin: 0 2% 75px 2%;
     border-radius: 4px;
-    box-shadow: 2px 4px 8px rgba(255, 255, 255, .7);
+    /*box-shadow: 2px 4px 8px rgba(255, 255, 255, .7);*/
   }
 
   .projectInfo {
@@ -69,7 +69,7 @@
     width: 150px;
     height: 250px;
     margin: 20px;
-    box-shadow: 2px 4px 8px rgba(255, 255, 255, .7);
+    /*box-shadow: 2px 4px 8px rgba(255, 255, 255, .7);*/
     float: left;
   }
 

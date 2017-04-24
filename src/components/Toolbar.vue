@@ -5,8 +5,8 @@
       <img src="../assets/dglogonewlong.png" style="height: 60px; padding: 0">
       <div class="motto">
         <div class="motto-item">DEVELOP</div>
-        <div class="motto-item">CREATE</div>
-        <div class="motto-item">IMPRESS</div>
+        <div class="motto-item">GENERATE</div>
+        <div class="motto-item">STRIVE</div>
       </div>
     </div>
     <a class="button" v-for="contact in contacts" v-bind:href="contact.path" :key="contact.name" v-once>{{contact.name}}</a>
@@ -26,8 +26,8 @@
           { path: '/about-us', name: 'About Us' },
         ],
         contacts: [
-          { path: 'github.com', name: 'Github' },
-          { path: 'linkedin.com', name: 'LinkedIn' },
+          { path: 'https://www.github.com/damgapstudios', name: 'Github' },
+          { path: '/contact', name: 'Contact Us' },
           { path: '/', name: 'Other' },
         ],
       };

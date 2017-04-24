@@ -23,6 +23,7 @@
         <label for="message">Message</label>
         <textarea class="contact" style="width: 100%" v-model="message" id="message"></textarea>
       </div>
+      <!--TODO There needs to be a submit button here-->
     </div>
 
 
