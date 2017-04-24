@@ -39,7 +39,7 @@
     methods: {
       showMore(id) {
         document.getElementById(id).style.height = '900px';
-        alert(id);
+//        alert(id);
       },
     },
   };
