@@ -29,4 +29,16 @@
     color: #ba3945;
     background-color: #313439;
   }
+
+  @import url(https://fonts.googleapis.com/css?family=Montserrat|Vollkorn:400,400italic,700);
+
+  h1,h2,h3,h4,h5,h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  p,a,li,blockquote {
+    font-family: "Vollkorn", serif;
+    font-weight: 400;
+  }
 </style>
