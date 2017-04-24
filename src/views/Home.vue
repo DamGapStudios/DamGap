@@ -1,12 +1,12 @@
 <template>
   <div class="home darkMode">
-    <div class="info">
-      <div class="center red-glow">
-        <span class="code-words">DEVELOP<span class="blinking-cursor">|</span></span>
-        <span class="create-words">CREATE </span>
-        <span class="smart-words"> IMPRESS</span>
-      </div>
-    </div>
+    <!--<div class="info">-->
+      <!--<div class="center red-glow">-->
+        <!--<span class="code-words">DEVELOP</span>-->
+        <!--<span class="create-words">CREATE </span>-->
+        <!--<span class="smart-words"> IMPRESS</span>-->
+      <!--</div>-->
+    <!--</div>-->
 
     <project-carousel style="padding-top: 20px"></project-carousel>
 
@@ -35,91 +35,13 @@
   .home {
     position: absolute; top: 0; left: 0;
     z-index: -1;
-    padding-top: 100px;
+    padding-top: 125px;
     width: 100%;
   }
   .center{
     text-align: center;
     padding: 22px 22% 22px 22%;
     margin: 0 5%;
-  }
-  .code-words {
-    font-family:	Lucida Console, Monaco, monospace;
-    font-size: 35px;
-    padding: 15px;
-    color: #ba3945;
-  }
-
-  .blinking-cursor {
-    font-weight: 100;
-    font-size: 30px;
-    color: #ba3945;
-    text-shadow: 0;
-    -webkit-animation: 1s blink step-end infinite;
-    -moz-animation: 1s blink step-end infinite;
-    -ms-animation: 1s blink step-end infinite;
-    -o-animation: 1s blink step-end infinite;
-    animation: 1s blink step-end infinite;
-  }
-
-  @keyframes "blink" {
-    from, to {
-      color: transparent;
-    }
-    50% {
-      color: #ba3945;
-    }
-  }
-
-  @-moz-keyframes blink {
-    from, to {
-      color: transparent;
-    }
-    50% {
-      color: #ba3945;
-    }
-  }
-
-  @-webkit-keyframes "blink" {
-    from, to {
-      color: transparent;
-    }
-    50% {
-      color: #ba3945;
-    }
-  }
-
-  @-ms-keyframes "blink" {
-    from, to {
-      color: transparent;
-    }
-    50% {
-      color: #ba3945;
-    }
-  }
-
-  @-o-keyframes "blink" {
-    from, to {
-      color: transparent;
-    }
-    50% {
-      color: #ba3945;
-    }
-  }
-
-  .create-words {
-    font-size: 35px;
-    padding: 15px;
-    font-family:	Comic Sans MS, cursive, sans-serif;
-    background-image: -webkit-linear-gradient(left, #ff0018 0%, #993b44 100%);
-    color:transparent;
-    -webkit-background-clip: text;
-  }
-
-  .smart-words {
-    font-size: 35px;
-    font-family:	Arial Black, Gadget, sans-serif;
-    color: #ba3945;
   }
 
   .info {

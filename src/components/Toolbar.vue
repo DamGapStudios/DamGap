@@ -1,7 +1,14 @@
 <template>
   <div class="toolbar">
     <a class="button" v-for="link in links" v-bind:href="link.path" :key="link.name" v-once>{{link.name}}</a>
-    <span class="title">DamGap Studios</span>
+    <div>
+      <img src="../assets/dglogonewlong.png" style="height: 60px; padding: 0">
+      <div class="motto">
+        <div class="motto-item">DEVELOP</div>
+        <div class="motto-item">CREATE</div>
+        <div class="motto-item">IMPRESS</div>
+      </div>
+    </div>
     <a class="button" v-for="contact in contacts" v-bind:href="contact.path" :key="contact.name" v-once>{{contact.name}}</a>
   </div>
 </template>
@@ -31,15 +38,20 @@
 </script>
 
 <style scoped>
-  .title {
-    font-size: 35px;
-    color: #ba3945;
+  .motto {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .motto-item {
+    font-family: "Montserrat", sans-serif;
   }
 
   .toolbar {
     margin: 0 5%;
     box-shadow: 2px 4px 8px rgba(255, 255, 255, .7);
-    height: 50px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: space-around;
